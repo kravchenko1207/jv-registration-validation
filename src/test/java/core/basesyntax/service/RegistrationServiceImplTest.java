@@ -81,7 +81,7 @@ class RegistrationServiceImplTest {
     void register_userWithNullLogin_notOk() {
         User user = new User();
         user.setLogin(null);
-        user.setPassword("superSecretPass");
+        user.setPassword("superSecretPassword");
         user.setAge(45);
 
         assertThrows(RegistrationException.class, () -> registrationService.register(null));
