@@ -15,13 +15,13 @@ public class RegistrationServiceImpl implements RegistrationService {
         }
 
         if (user.getLogin() == null || user.getLogin().length() < 6) {
-            throw new RegistrationException("Login must be at least 6 characters, " +
-                    "not null");
+            throw new RegistrationException("Login must be at least 6 characters, "
+                    + "not null");
         }
 
         if (user.getPassword() == null || user.getPassword().length() < 6) {
-            throw new RegistrationException("Password must be at least 6 characters, " +
-                    "and not null");
+            throw new RegistrationException("Password must be at least 6 characters, "
+                    + "and not null");
         }
 
         if (user.getAge() == null || user.getAge() < 18) {
@@ -33,5 +33,6 @@ public class RegistrationServiceImpl implements RegistrationService {
         }
 
         return storageDao.add(user);
+
     }
 }
