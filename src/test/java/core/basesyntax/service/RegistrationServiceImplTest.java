@@ -56,7 +56,8 @@ class RegistrationServiceImplTest {
         user1.setLogin("userSameLogin");
         user1.setPassword("123456");
         user1.setAge(19);
-        registrationService.register(user1);
+
+        Storage.people.add(user1);
 
         User user2 = new User();
         user2.setLogin("userSameLogin");
